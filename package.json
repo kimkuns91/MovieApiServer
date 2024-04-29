@@ -7,7 +7,8 @@
         "dev": "nodemon server.js",
         "vercel-build": "prisma generate",
         "start": "node server.js",
-        "generate": "prisma generate"
+        "generate": "prisma generate",
+        "postinstall": "prisma generate"
     },
     "dependencies": {
         "@prisma/client": "^4.16.1",
