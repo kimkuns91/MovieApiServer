@@ -1,3 +1,4 @@
+import apiRouter from './routes';
 import { config } from "dotenv";
 import cors from "cors";
 import express from "express";
@@ -13,6 +14,7 @@ app.use(
         origin: "*",
     })
 );
+app.use('/api', apiRouter);
 
 app.get("/", (req, res) => {
     res.status(200).json({
