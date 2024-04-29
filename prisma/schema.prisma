@@ -1,0 +1,28 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+model Movie {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  backdropPath      String?
+  originalTitle     String
+  overview          String
+  posterPath        String?
+  videoPath         String? 
+  mediaType         String
+  adult             Boolean
+  title             String
+  originalLanguage  String
+  genreIds          Json
+  popularity        Float
+  releaseDate       DateTime
+  video             Boolean
+  voteAverage       Float
+  voteCount         Int
+}
