@@ -1,16 +1,14 @@
 import { Router } from 'express';
-import movieRouter from './movieRouter.js';
+import movieRouter from './movieRouter.js'; // Importing the movieRouter
 
-// movieRouter를 가져옵니다.
+const apiRouter = Router(); // Creating a new Router instance
 
-const apiRouter = Router();
-
-// Define routes for the apiRouter
+// Define the root route for the API
 apiRouter.get('/', (req, res) => {
     res.send('Welcome to the API');
 });
 
-// movies 경로에 대한 router를 설정합니다.
+// Set up the movies route to use the movieRouter for handling
 apiRouter.use('/movies', movieRouter);
 
 export default apiRouter;
