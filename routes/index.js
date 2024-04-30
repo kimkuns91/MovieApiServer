@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import movieRouter from './movieRouter';
+import movieRouter from './movieRouter.js';
 
 // movieRouter를 가져옵니다.
 

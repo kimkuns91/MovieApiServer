@@ -1,4 +1,4 @@
-import * as movieController from '../controllers/movieController';
+import * as movieController from '../controllers/movieController.js';
 
 import { Router } from 'express';
 

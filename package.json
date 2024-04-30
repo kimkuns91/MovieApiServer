@@ -2,11 +2,12 @@
     "name": "movieapiserver",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "index.js",
+    "type": "module",
     "scripts": {
         "dev": "nodemon server.js",
         "vercel-build": "prisma generate",
-        "start": "node server.js",
+        "start": "nodemon server.js",
         "generate": "prisma generate",
         "postinstall": "prisma generate"
     },
